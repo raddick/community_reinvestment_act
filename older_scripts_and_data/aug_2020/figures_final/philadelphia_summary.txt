@@ -1,0 +1,13 @@
+PHILADELPHIA
+Total city population: 1,575,522
+Population included in study: 1,571,247
+Small business jobs included in study: 615,492
+
+Census tracts included in study: 369
+City-wide percent black residents: 42.3%
+Number of working loans: 115,131
+Total amount of working loans (2018USD): $5,514,702,517
+
+Race lending ratio: 1.78
+Slope of best-fit line for lending by race:
+	-$373 per SB job per percent black (r^2 = 0.108)

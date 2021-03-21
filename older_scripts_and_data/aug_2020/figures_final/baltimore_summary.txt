@@ -1,0 +1,13 @@
+BALTIMORE
+Total city population: 614,700
+Population included in study: 608,544
+Small business jobs included in study: 69,696
+
+Census tracts included in study: 192
+City-wide percent black residents: 62.4%
+Number of working loans: 46,234
+Total amount of working loans (2018USD): $2,431,128,114
+
+Race lending ratio: 1.57
+Slope of best-fit line for lending by race:
+	-$372 per SB job per percent black (r^2 = 0.069)

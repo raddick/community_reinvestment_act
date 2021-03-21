@@ -1,0 +1,13 @@
+DETROIT
+Total city population: 677,155
+Population included in study: 652,696
+Small business jobs included in study: 5,934
+
+Census tracts included in study: 258
+City-wide percent black residents: 78.4%
+Number of working loans: 22,529
+Total amount of working loans (2018USD): $1,683,645,594
+
+Race lending ratio: 2.01
+Slope of best-fit line for lending by race:
+	-$755 per SB job per percent black (r^2 = 0.037)

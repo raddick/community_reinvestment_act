@@ -1,0 +1,62 @@
+varnum,variable,description,sequence_number
+2,STUSAB,STUSAB,1
+5,LOGRECNO,LOGRECNO,1
+1305,B01001_001,SEX BY AGE for  Total population% Total:,10
+1315,B01001_011,SEX BY AGE for  Total population% Male:% 25 to 29 years,10
+1316,B01001_012,SEX BY AGE for  Total population% Male:% 30 to 34 years,10
+1317,B01001_013,SEX BY AGE for  Total population% Male:% 35 to 39 years,10
+1318,B01001_014,SEX BY AGE for  Total population% Male:% 40 to 44 years,10
+1319,B01001_015,SEX BY AGE for  Total population% Male:% 45 to 49 years,10
+1320,B01001_016,SEX BY AGE for  Total population% Male:% 50 to 54 years,10
+1321,B01001_017,SEX BY AGE for  Total population% Male:% 55 to 59 years,10
+1322,B01001_018,SEX BY AGE for  Total population% Male:% 60 and 61 years,10
+1323,B01001_019,SEX BY AGE for  Total population% Male:% 62 to 64 years,10
+1324,B01001_020,SEX BY AGE for  Total population% Male:% 65 and 66 years,10
+1325,B01001_021,SEX BY AGE for  Total population% Male:% 67 to 69 years,10
+1326,B01001_022,SEX BY AGE for  Total population% Male:% 70 to 74 years,10
+1327,B01001_023,SEX BY AGE for  Total population% Male:% 75 to 79 years,10
+1328,B01001_024,SEX BY AGE for  Total population% Male:% 80 to 84 years,10
+1329,B01001_025,SEX BY AGE for  Total population% Male:% 85 years and over,10
+1339,B01001_035,SEX BY AGE for  Total population% Female:% 25 to 29 years,10
+1340,B01001_036,SEX BY AGE for  Total population% Female:% 30 to 34 years,10
+1341,B01001_037,SEX BY AGE for  Total population% Female:% 35 to 39 years,10
+1342,B01001_038,SEX BY AGE for  Total population% Female:% 40 to 44 years,10
+1343,B01001_039,SEX BY AGE for  Total population% Female:% 45 to 49 years,10
+1344,B01001_040,SEX BY AGE for  Total population% Female:% 50 to 54 years,10
+1345,B01001_041,SEX BY AGE for  Total population% Female:% 55 to 59 years,10
+1346,B01001_042,SEX BY AGE for  Total population% Female:% 60 and 61 years,10
+1347,B01001_043,SEX BY AGE for  Total population% Female:% 62 to 64 years,10
+1348,B01001_044,SEX BY AGE for  Total population% Female:% 65 and 66 years,10
+1349,B01001_045,SEX BY AGE for  Total population% Female:% 67 to 69 years,10
+1350,B01001_046,SEX BY AGE for  Total population% Female:% 70 to 74 years,10
+1351,B01001_047,SEX BY AGE for  Total population% Female:% 75 to 79 years,10
+1352,B01001_048,SEX BY AGE for  Total population% Female:% 80 to 84 years,10
+1353,B01001_049,SEX BY AGE for  Total population% Female:% 85 years and over,10
+1665,B02001_002,RACE for  Total population% White alone,12
+1666,B02001_003,RACE for  Total population% Black or African American alone,12
+5489,B11001_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) for  Households% Total:,33
+5494,B11001_006,"HOUSEHOLD TYPE (INCLUDING LIVING ALONE) for  Households% Family households:% Other family:% Female householder, no husband present",33
+5507,B11001B_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) (BLACK OR AFRICAN AMERICAN ALONE) for  Households with a householder who is Black or African American alone% Total:,33
+5561,B11001H_001,"HOUSEHOLD TYPE (INCLUDING LIVING ALONE) (WHITE ALONE, NOT HISPANIC OR LATINO) for  Households with a householder who is White alone, not Hispanic or Latino% Total:",33
+6856,B15002_011,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% High school graduate, GED, or alternative",40
+6857,B15002_012,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Some college, less than 1 year",40
+6858,B15002_013,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Some college, 1 or more years, no degree",40
+6859,B15002_014,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Associate's degree,40
+6860,B15002_015,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Bachelor's degree,40
+6861,B15002_016,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Master's degree,40
+6862,B15002_017,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Professional school degree,40
+6863,B15002_018,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Male:% Doctorate degree,40
+6873,B15002_028,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% High school graduate, GED, or alternative",40
+6874,B15002_029,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Some college, less than 1 year",40
+6875,B15002_030,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Some college, 1 or more years, no degree",40
+6876,B15002_031,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Associate's degree,40
+6877,B15002_032,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Bachelor's degree,40
+6878,B15002_033,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Master's degree,40
+6879,B15002_034,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Professional school degree,40
+6880,B15002_035,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for  Population 25 years and over% Female:% Doctorate degree,40
+7484,B17001_001,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE for  Population for whom poverty status is determined% Total:,44
+7485,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE for  Population for whom poverty status is determined% Income in the past 12 months below poverty level:,44
+10591,B19113_001,MEDIAN FAMILY INCOME IN THE PAST 12 MONTHS (IN 2010 INFLATION-ADJUSTED DOLLARS) for  Families% Median family income in the past 12 months (in 2010 inflation-adjusted dollars),58
+17302,B25003_002,TENURE for  Occupied housing units% Owner occupied,95
+17794,B25035_001,MEDIAN YEAR STRUCTURE BUILT for  Housing units% Median year structure built,97
+18334,B25077_001,MEDIAN VALUE (DOLLARS) for  Owner-occupied housing units% Median value (dollars),99

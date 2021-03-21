@@ -1,0 +1,13 @@
+WASHINGTON D.C.
+Total city population: 684,498
+Population included in study: 684,438
+Small business jobs included in study: 310,788
+
+Census tracts included in study: 178
+City-wide percent black residents: 46.9%
+Number of working loans: 92,570
+Total amount of working loans (2018USD): $4,428,301,036
+
+Race lending ratio: 1.14
+Slope of best-fit line for lending by race:
+	-$126 per SB job per percent black (r^2 = 0.012)

@@ -1,0 +1,16 @@
+varnum,variable,description,sequence_number
+2,STUSAB,STUSAB,1
+5,LOGRECNO,LOGRECNO,1
+8,B01001_001,Total population,2
+368,B02001_002,Total population% White alone,4
+369,B02001_003,Total population% Black or African American alone,4
+6742,B11001_001,Households,36
+6747,B11001_006,"Households% Family households:% Other family:% Female householder, no husband present",36
+8294,B15002_011,Population 25 years and over% Male:% High school graduate (includes equivalency),43
+8311,B15002_028,Population 25 years and over% Female:% High school graduate (includes equivalency),43
+9075,B17001_002,Population for whom poverty status is determined% Income in the past 12 months below poverty level:,48
+12615,B19113_001,Families,64
+15223,B23025_005,Population 16 years and over% In labor force:% Civilian labor force:% Unemployed,79
+19463,B25003_002,Occupied housing units% Owner occupied,103
+19955,B25035_001,Housing units,105
+20446,B25077_001,Owner-occupied housing units,107

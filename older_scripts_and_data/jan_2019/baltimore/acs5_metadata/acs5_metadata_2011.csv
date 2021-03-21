@@ -1,0 +1,64 @@
+varnum,variable,description,sequence_number
+2,STUSAB,STUSAB,1
+5,LOGRECNO,LOGRECNO,1
+8,B01001_001,Total population,2
+18,B01001_011,Total population%Male:%25 to 29 years,2
+19,B01001_012,Total population%Male:%30 to 34 years,2
+20,B01001_013,Total population%Male:%35 to 39 years,2
+21,B01001_014,Total population%Male:%40 to 44 years,2
+22,B01001_015,Total population%Male:%45 to 49 years,2
+23,B01001_016,Total population%Male:%50 to 54 years,2
+24,B01001_017,Total population%Male:%55 to 59 years,2
+25,B01001_018,Total population%Male:%60 and 61 years,2
+26,B01001_019,Total population%Male:%62 to 64 years,2
+27,B01001_020,Total population%Male:%65 and 66 years,2
+28,B01001_021,Total population%Male:%67 to 69 years,2
+29,B01001_022,Total population%Male:%70 to 74 years,2
+30,B01001_023,Total population%Male:%75 to 79 years,2
+31,B01001_024,Total population%Male:%80 to 84 years,2
+32,B01001_025,Total population%Male:%85 years and over,2
+42,B01001_035,Total population%Female:%25 to 29 years,2
+43,B01001_036,Total population%Female:%30 to 34 years,2
+44,B01001_037,Total population%Female:%35 to 39 years,2
+45,B01001_038,Total population%Female:%40 to 44 years,2
+46,B01001_039,Total population%Female:%45 to 49 years,2
+47,B01001_040,Total population%Female:%50 to 54 years,2
+48,B01001_041,Total population%Female:%55 to 59 years,2
+49,B01001_042,Total population%Female:%60 and 61 years,2
+50,B01001_043,Total population%Female:%62 to 64 years,2
+51,B01001_044,Total population%Female:%65 and 66 years,2
+52,B01001_045,Total population%Female:%67 to 69 years,2
+53,B01001_046,Total population%Female:%70 to 74 years,2
+54,B01001_047,Total population%Female:%75 to 79 years,2
+55,B01001_048,Total population%Female:%80 to 84 years,2
+56,B01001_049,Total population%Female:%85 years and over,2
+368,B02001_002,Total population%White alone,4
+369,B02001_003,Total population%Black or African American alone,4
+6708,B11001_001,Households,36
+6713,B11001_006,"Households%Family households:%Other family:%Female householder, no husband present",36
+6726,B11001B_001,Households with a householder who is Black or African American alone,36
+6780,B11001H_001,"Households with a householder who is White alone, not Hispanic or Latino",36
+8075,B15002_011,"Population 25 years and over%Male:%High school graduate, GED, or alternative",43
+8076,B15002_012,"Population 25 years and over%Male:%Some college, less than 1 year",43
+8077,B15002_013,"Population 25 years and over%Male:%Some college, 1 or more years, no degree",43
+8078,B15002_014,Population 25 years and over%Male:%Associate's degree,43
+8079,B15002_015,Population 25 years and over%Male:%Bachelor's degree,43
+8080,B15002_016,Population 25 years and over%Male:%Master's degree,43
+8081,B15002_017,Population 25 years and over%Male:%Professional school degree,43
+8082,B15002_018,Population 25 years and over%Male:%Doctorate degree,43
+8092,B15002_028,"Population 25 years and over%Female:%High school graduate, GED, or alternative",43
+8093,B15002_029,"Population 25 years and over%Female:%Some college, less than 1 year",43
+8094,B15002_030,"Population 25 years and over%Female:%Some college, 1 or more years, no degree",43
+8095,B15002_031,Population 25 years and over%Female:%Associate's degree,43
+8096,B15002_032,Population 25 years and over%Female:%Bachelor's degree,43
+8097,B15002_033,Population 25 years and over%Female:%Master's degree,43
+8098,B15002_034,Population 25 years and over%Female:%Professional school degree,43
+8099,B15002_035,Population 25 years and over%Female:%Doctorate degree,43
+8715,B17001_001,Population for whom poverty status is determined,47
+8716,B17001_002,Population for whom poverty status is determined%Income in the past 12 months below poverty level:,47
+11793,B19113_001,Families,61
+14320,B23025_002,Population 16 years and over%In labor force:,75
+14323,B23025_005,Population 16 years and over%In labor force:%Civilian labor force:%Unemployed,75
+18540,B25003_002,Occupied housing units%Owner occupied,99
+19032,B25035_001,Housing units,101
+19523,B25077_001,Owner-occupied housing units,103

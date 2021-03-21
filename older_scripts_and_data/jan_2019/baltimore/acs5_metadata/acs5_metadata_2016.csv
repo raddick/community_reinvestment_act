@@ -1,0 +1,64 @@
+varnum,variable,description,sequence_number
+2,STUSAB,,1
+5,LOGRECNO,,1
+8,B01001_001,SEX BY AGE for Total Population% Total:,2
+18,B01001_011,SEX BY AGE for Total Population% Male:% 25 to 29 years,2
+19,B01001_012,SEX BY AGE for Total Population% Male:% 30 to 34 years,2
+20,B01001_013,SEX BY AGE for Total Population% Male:% 35 to 39 years,2
+21,B01001_014,SEX BY AGE for Total Population% Male:% 40 to 44 years,2
+22,B01001_015,SEX BY AGE for Total Population% Male:% 45 to 49 years,2
+23,B01001_016,SEX BY AGE for Total Population% Male:% 50 to 54 years,2
+24,B01001_017,SEX BY AGE for Total Population% Male:% 55 to 59 years,2
+25,B01001_018,SEX BY AGE for Total Population% Male:% 60 and 61 years,2
+26,B01001_019,SEX BY AGE for Total Population% Male:% 62 to 64 years,2
+27,B01001_020,SEX BY AGE for Total Population% Male:% 65 and 66 years,2
+28,B01001_021,SEX BY AGE for Total Population% Male:% 67 to 69 years,2
+29,B01001_022,SEX BY AGE for Total Population% Male:% 70 to 74 years,2
+30,B01001_023,SEX BY AGE for Total Population% Male:% 75 to 79 years,2
+31,B01001_024,SEX BY AGE for Total Population% Male:% 80 to 84 years,2
+32,B01001_025,SEX BY AGE for Total Population% Male:% 85 years and over,2
+42,B01001_035,SEX BY AGE for Total Population% Female:% 25 to 29 years,2
+43,B01001_036,SEX BY AGE for Total Population% Female:% 30 to 34 years,2
+44,B01001_037,SEX BY AGE for Total Population% Female:% 35 to 39 years,2
+45,B01001_038,SEX BY AGE for Total Population% Female:% 40 to 44 years,2
+46,B01001_039,SEX BY AGE for Total Population% Female:% 45 to 49 years,2
+47,B01001_040,SEX BY AGE for Total Population% Female:% 50 to 54 years,2
+48,B01001_041,SEX BY AGE for Total Population% Female:% 55 to 59 years,2
+49,B01001_042,SEX BY AGE for Total Population% Female:% 60 and 61 years,2
+50,B01001_043,SEX BY AGE for Total Population% Female:% 62 to 64 years,2
+51,B01001_044,SEX BY AGE for Total Population% Female:% 65 and 66 years,2
+52,B01001_045,SEX BY AGE for Total Population% Female:% 67 to 69 years,2
+53,B01001_046,SEX BY AGE for Total Population% Female:% 70 to 74 years,2
+54,B01001_047,SEX BY AGE for Total Population% Female:% 75 to 79 years,2
+55,B01001_048,SEX BY AGE for Total Population% Female:% 80 to 84 years,2
+56,B01001_049,SEX BY AGE for Total Population% Female:% 85 years and over,2
+368,B02001_002,RACE for Total Population% White alone,4
+369,B02001_003,RACE for Total Population% Black or African American alone,4
+6601,B11001_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) for Households% Total:,36
+6606,B11001_006,"HOUSEHOLD TYPE (INCLUDING LIVING ALONE) for Households% Family households:% Other family:% Female householder, no husband present",36
+6619,B11001B_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) (BLACK OR AFRICAN AMERICAN ALONE) for Households With A Householder Who Is Black Or African American Alone% Total:,36
+6673,B11001H_001,"HOUSEHOLD TYPE (INCLUDING LIVING ALONE) (WHITE ALONE, NOT HISPANIC OR LATINO) for Households With A Householder Who Is White Alone, Not Hispanic Or Latino% Total:",36
+8113,B15002_011,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% High school graduate (includes equivalency),43
+8114,B15002_012,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Some college, less than 1 year",43
+8115,B15002_013,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Some college, 1 or more years, no degree",43
+8116,B15002_014,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Associate's degree,43
+8117,B15002_015,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Bachelor's degree,43
+8118,B15002_016,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Master's degree,43
+8119,B15002_017,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Professional school degree,43
+8120,B15002_018,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% Doctorate degree,43
+8130,B15002_028,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% High school graduate (includes equivalency),43
+8131,B15002_029,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Some college, less than 1 year",43
+8132,B15002_030,"SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Some college, 1 or more years, no degree",43
+8133,B15002_031,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Associate's degree,43
+8134,B15002_032,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Bachelor's degree,43
+8135,B15002_033,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Master's degree,43
+8136,B15002_034,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Professional school degree,43
+8137,B15002_035,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% Doctorate degree,43
+8940,B17001_001,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE for Population For Whom Poverty Status Is Determined% Total:,48
+8941,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE for Population For Whom Poverty Status Is Determined% Income in the past 12 months below poverty level:,48
+12481,B19113_001,MEDIAN FAMILY INCOME IN THE PAST 12 MONTHS (IN 2016 INFLATION-ADJUSTED DOLLARS) for Families% Median family income in the past 12 months (in 2016 inflation-adjusted dollars),64
+15067,B23025_002,EMPLOYMENT STATUS FOR THE POPULATION 16 YEARS AND OVER for Population 16 Years And Over% In labor force:,79
+15070,B23025_005,EMPLOYMENT STATUS FOR THE POPULATION 16 YEARS AND OVER for Population 16 Years And Over% In labor force:% Civilian labor force:% Unemployed,79
+19372,B25003_002,TENURE for Occupied Housing Units% Owner occupied,103
+19864,B25035_001,MEDIAN YEAR STRUCTURE BUILT for Housing Units% Median year structure built,105
+20332,B25077_001,MEDIAN VALUE (DOLLARS) for Owner-Occupied Housing Units% Median value (dollars),106

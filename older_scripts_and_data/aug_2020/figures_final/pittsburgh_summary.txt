@@ -1,0 +1,13 @@
+PITTSBURGH
+Total city population: 303,587
+Population included in study: 295,591
+Small business jobs included in study: 52,555
+
+Census tracts included in study: 115
+City-wide percent black residents: 22.5%
+Number of working loans: 42,305
+Total amount of working loans (2018USD): $2,599,103,792
+
+Race lending ratio: 1.32
+Slope of best-fit line for lending by race:
+	-$489 per SB job per percent black (r^2 = 0.056)

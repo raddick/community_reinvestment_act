@@ -1,0 +1,13 @@
+ST. LOUIS
+Total city population: 311,273
+Population included in study: 308,814
+Small business jobs included in study: 3,090
+
+Census tracts included in study: 103
+City-wide percent black residents: 46.5%
+Number of working loans: 34,455
+Total amount of working loans (2018USD): $2,627,941,568
+
+Race lending ratio: 1.62
+Slope of best-fit line for lending by race:
+	-$1,009 per SB job per percent black (r^2 = 0.034)

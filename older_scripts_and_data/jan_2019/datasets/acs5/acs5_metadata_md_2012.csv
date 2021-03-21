@@ -1,0 +1,16 @@
+varnum,variable,description,sequence_number
+2,STUSAB,STUSAB,1
+5,LOGRECNO,LOGRECNO,1
+8,B01001_001,Total:,2
+368,B02001_002,Total:% White alone,4
+369,B02001_003,Total:% Black or African American alone,4
+6741,B11001_001,Total:,36
+6746,B11001_006,"Total:% Family households:% Other family:% Female householder, no husband present",36
+8293,B15002_011,"Total:% Male:% High school graduate, GED, or alternative",43
+8310,B15002_028,"Total:% Female:% High school graduate, GED, or alternative",43
+8959,B17001_002,Total:% Income in the past 12 months below poverty level:,47
+12482,B19113_001,Median family income in the past 12 months (in 2012 inflation-adjusted dollars),63
+15090,B23025_005,Total:% In labor force:% Civilian labor force:% Unemployed,78
+19330,B25003_002,Total:% Owner occupied,102
+19822,B25035_001,Median year structure built,104
+20313,B25077_001,Median value (dollars),106

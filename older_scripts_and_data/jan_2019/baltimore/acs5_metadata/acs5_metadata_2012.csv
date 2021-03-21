@@ -1,0 +1,64 @@
+varnum,variable,description,sequence_number
+2,STUSAB,STUSAB,1
+5,LOGRECNO,LOGRECNO,1
+8,B01001_001,Total:,2
+18,B01001_011,Total:% Male:% 25 to 29 years,2
+19,B01001_012,Total:% Male:% 30 to 34 years,2
+20,B01001_013,Total:% Male:% 35 to 39 years,2
+21,B01001_014,Total:% Male:% 40 to 44 years,2
+22,B01001_015,Total:% Male:% 45 to 49 years,2
+23,B01001_016,Total:% Male:% 50 to 54 years,2
+24,B01001_017,Total:% Male:% 55 to 59 years,2
+25,B01001_018,Total:% Male:% 60 and 61 years,2
+26,B01001_019,Total:% Male:% 62 to 64 years,2
+27,B01001_020,Total:% Male:% 65 and 66 years,2
+28,B01001_021,Total:% Male:% 67 to 69 years,2
+29,B01001_022,Total:% Male:% 70 to 74 years,2
+30,B01001_023,Total:% Male:% 75 to 79 years,2
+31,B01001_024,Total:% Male:% 80 to 84 years,2
+32,B01001_025,Total:% Male:% 85 years and over,2
+42,B01001_035,Total:% Female:% 25 to 29 years,2
+43,B01001_036,Total:% Female:% 30 to 34 years,2
+44,B01001_037,Total:% Female:% 35 to 39 years,2
+45,B01001_038,Total:% Female:% 40 to 44 years,2
+46,B01001_039,Total:% Female:% 45 to 49 years,2
+47,B01001_040,Total:% Female:% 50 to 54 years,2
+48,B01001_041,Total:% Female:% 55 to 59 years,2
+49,B01001_042,Total:% Female:% 60 and 61 years,2
+50,B01001_043,Total:% Female:% 62 to 64 years,2
+51,B01001_044,Total:% Female:% 65 and 66 years,2
+52,B01001_045,Total:% Female:% 67 to 69 years,2
+53,B01001_046,Total:% Female:% 70 to 74 years,2
+54,B01001_047,Total:% Female:% 75 to 79 years,2
+55,B01001_048,Total:% Female:% 80 to 84 years,2
+56,B01001_049,Total:% Female:% 85 years and over,2
+368,B02001_002,Total:% White alone,4
+369,B02001_003,Total:% Black or African American alone,4
+6741,B11001_001,Total:,36
+6746,B11001_006,"Total:% Family households:% Other family:% Female householder, no husband present",36
+6759,B11001B_001,Total:,36
+6813,B11001H_001,Total:,36
+8293,B15002_011,"Total:% Male:% High school graduate, GED, or alternative",43
+8294,B15002_012,"Total:% Male:% Some college, less than 1 year",43
+8295,B15002_013,"Total:% Male:% Some college, 1 or more years, no degree",43
+8296,B15002_014,Total:% Male:% Associate's degree,43
+8297,B15002_015,Total:% Male:% Bachelor's degree,43
+8298,B15002_016,Total:% Male:% Master's degree,43
+8299,B15002_017,Total:% Male:% Professional school degree,43
+8300,B15002_018,Total:% Male:% Doctorate degree,43
+8310,B15002_028,"Total:% Female:% High school graduate, GED, or alternative",43
+8311,B15002_029,"Total:% Female:% Some college, less than 1 year",43
+8312,B15002_030,"Total:% Female:% Some college, 1 or more years, no degree",43
+8313,B15002_031,Total:% Female:% Associate's degree,43
+8314,B15002_032,Total:% Female:% Bachelor's degree,43
+8315,B15002_033,Total:% Female:% Master's degree,43
+8316,B15002_034,Total:% Female:% Professional school degree,43
+8317,B15002_035,Total:% Female:% Doctorate degree,43
+8958,B17001_001,Total:,47
+8959,B17001_002,Total:% Income in the past 12 months below poverty level:,47
+12482,B19113_001,Median family income in the past 12 months (in 2012 inflation-adjusted dollars),63
+15087,B23025_002,Total:% In labor force:,78
+15090,B23025_005,Total:% In labor force:% Civilian labor force:% Unemployed,78
+19330,B25003_002,Total:% Owner occupied,102
+19822,B25035_001,Median year structure built,104
+20313,B25077_001,Median value (dollars),106

@@ -1,0 +1,13 @@
+CLEVELAND
+Total city population: 387,530
+Population included in study: 370,630
+Small business jobs included in study: 2,310
+
+Census tracts included in study: 154
+City-wide percent black residents: 48.3%
+Number of working loans: 29,352
+Total amount of working loans (2018USD): $2,042,972,449
+
+Race lending ratio: 2.06
+Slope of best-fit line for lending by race:
+	-$1,581 per SB job per percent black (r^2 = 0.040)

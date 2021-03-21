@@ -1,0 +1,16 @@
+varnum,variable,description,sequence_number
+2,STUSAB,,1
+5,LOGRECNO,,1
+8,B01001_001,SEX BY AGE for Total Population% Total:,2
+368,B02001_002,RACE for Total Population% White alone,4
+369,B02001_003,RACE for Total Population% Black or African American alone,4
+6601,B11001_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) for Households% Total:,36
+6606,B11001_006,"HOUSEHOLD TYPE (INCLUDING LIVING ALONE) for Households% Family households:% Other family:% Female householder, no husband present",36
+8113,B15002_011,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Male:% High school graduate (includes equivalency),43
+8130,B15002_028,SEX BY EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER for Population 25 Years And Over% Female:% High school graduate (includes equivalency),43
+8941,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE for Population For Whom Poverty Status Is Determined% Income in the past 12 months below poverty level:,48
+12481,B19113_001,MEDIAN FAMILY INCOME IN THE PAST 12 MONTHS (IN 2016 INFLATION-ADJUSTED DOLLARS) for Families% Median family income in the past 12 months (in 2016 inflation-adjusted dollars),64
+15070,B23025_005,EMPLOYMENT STATUS FOR THE POPULATION 16 YEARS AND OVER for Population 16 Years And Over% In labor force:% Civilian labor force:% Unemployed,79
+19372,B25003_002,TENURE for Occupied Housing Units% Owner occupied,103
+19864,B25035_001,MEDIAN YEAR STRUCTURE BUILT for Housing Units% Median year structure built,105
+20332,B25077_001,MEDIAN VALUE (DOLLARS) for Owner-Occupied Housing Units% Median value (dollars),106
