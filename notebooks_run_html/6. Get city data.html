@@ -14593,7 +14593,7 @@ Parsing 2018 census tracts and places in md...
 	Matching Baltimore 2018 data (city area = 238.4 square km)...
 Parsing 2017 census tracts and places in md...
 	Matching Baltimore 2017 data (city area = 238.4 square km)...
-Found 600 tract-years in 10 seconds!
+Found 600 tract-years in 12 seconds!
 </pre>
 </div>
 </div>
@@ -14997,10 +14997,10 @@ Plotting tracts for potential border differences...
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>reading nationwide data...
-Read 3,046,200 nationwide tract-years in 10 seconds...
+Read 3,046,200 nationwide tract-years in 13 seconds...
 converting columns to numeric...
 calculating total loans...
-Kept 600 tract-years in 13 seconds!
+Kept 600 tract-years in 16 seconds!
 </pre>
 </div>
 </div>
@@ -15079,8 +15079,8 @@ Kept 600 tract-years in 13 seconds!
 <span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span>
 
-<span class="c1"># print(&#39;backing up...&#39;)</span>
-<span class="c1"># data_gdf_bk = data_gdf</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;backing up...&#39;</span><span class="p">)</span>
+<span class="n">data_gdf_bk</span> <span class="o">=</span> <span class="n">data_gdf</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kept </span><span class="si">{0:,.0f}</span><span class="s1"> tract-years in </span><span class="si">{1:}</span><span class="s1"> in </span><span class="si">{2:,.2f}</span><span class="s1"> seconds!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">),</span> <span class="n">city</span><span class="p">,</span> <span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data_gdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;income_group&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data_gdf</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;cra_level&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
@@ -15109,6 +15109,7 @@ Kept 600 tract-years in 13 seconds!
 Adding CRA income levels (low/moderate/middle/upper/unknown)...
 Getting CRA income levels for tracts where only CRA level was reported...
 calculating working loans...
+backing up...
 Kept 600 tract-years in Baltimore in 0.10 seconds!
 income_group
 10% to 20% of MFI       12
@@ -15158,6 +15159,10 @@ dtype: int64
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
+<span class="c1"># IMPORTANT NOTE ABOUT JOBS VARIABLES</span>
+<span class="c1"># Race, ethnicity, education, sex reported 2009 t.e.m. 2018</span>
+<span class="c1"># Firm age reported 2011 t.e.m. 2017</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;reading state jobs data for </span><span class="si">{0:}</span><span class="s1">...&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">state_abbrev</span><span class="o">.</span><span class="n">upper</span><span class="p">()))</span>
 
 <span class="n">statejobfiles</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">jobs_dir</span><span class="o">+</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">jobs_dir</span><span class="p">)</span> <span class="k">if</span> <span class="s1">&#39;</span><span class="si">{0:}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">state_abbrev</span><span class="p">)</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">and</span> <span class="s1">&#39;</span><span class="si">{0:}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">state_abbrev</span><span class="p">)</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
@@ -15185,6 +15190,7 @@ dtype: int64
 <span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Read jobs for </span><span class="si">{0:,.0f}</span><span class="s1"> block-group-years in </span><span class="si">{1:}</span><span class="s1"> in </span><span class="si">{2:,.0f}</span><span class="s1"> minutes </span><span class="si">{3:,.0f}</span><span class="s1"> seconds!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">city_raw_jobs_df</span><span class="p">),</span> <span class="n">city</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">%</span><span class="k">60</span>)))
+<span class="n">city_raw_jobs_df</span>
 </pre></div>
 
      </div>
@@ -15208,9 +15214,355 @@ dtype: int64
 Reading /home/idies/workspace/Temporary/raddick/cra_scratch/lodes_wac/jobs_data_md.csv...
 constructing GEOIDs...
 selecting raw jobs from Baltimore...
-Read jobs for 2,004,138 block-group-years in Baltimore in 4 minutes 43 seconds!
+Read jobs for 2,004,138 block-group-years in Baltimore in 5 minutes 1 seconds!
 </pre>
 </div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>w_geocode</th>
+      <th>C000</th>
+      <th>CA01</th>
+      <th>CA02</th>
+      <th>CA03</th>
+      <th>CE01</th>
+      <th>CE02</th>
+      <th>CE03</th>
+      <th>CNS01</th>
+      <th>CNS02</th>
+      <th>...</th>
+      <th>CFA04</th>
+      <th>CFA05</th>
+      <th>CFS01</th>
+      <th>CFS02</th>
+      <th>CFS03</th>
+      <th>CFS04</th>
+      <th>CFS05</th>
+      <th>createdate</th>
+      <th>year</th>
+      <th>GEOID</th>
+    </tr>
+    <tr>
+      <th>rownumber</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>40668</th>
+      <td>245100101001001</td>
+      <td>7</td>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>2</td>
+      <td>4</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20160228</td>
+      <td>2004</td>
+      <td>14000US24510010100</td>
+    </tr>
+    <tr>
+      <th>40669</th>
+      <td>245100101001002</td>
+      <td>8</td>
+      <td>1</td>
+      <td>5</td>
+      <td>2</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20160228</td>
+      <td>2004</td>
+      <td>14000US24510010100</td>
+    </tr>
+    <tr>
+      <th>40670</th>
+      <td>245100101001007</td>
+      <td>51</td>
+      <td>11</td>
+      <td>32</td>
+      <td>8</td>
+      <td>9</td>
+      <td>29</td>
+      <td>13</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20160228</td>
+      <td>2004</td>
+      <td>14000US24510010100</td>
+    </tr>
+    <tr>
+      <th>40671</th>
+      <td>245100101001018</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20160228</td>
+      <td>2004</td>
+      <td>14000US24510010100</td>
+    </tr>
+    <tr>
+      <th>40672</th>
+      <td>245100101002000</td>
+      <td>14</td>
+      <td>2</td>
+      <td>9</td>
+      <td>3</td>
+      <td>3</td>
+      <td>9</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20160228</td>
+      <td>2004</td>
+      <td>14000US24510010100</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19081803</th>
+      <td>245102801021017</td>
+      <td>1938</td>
+      <td>107</td>
+      <td>1212</td>
+      <td>619</td>
+      <td>8</td>
+      <td>136</td>
+      <td>1794</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20201120</td>
+      <td>2018</td>
+      <td>14000US24510280102</td>
+    </tr>
+    <tr>
+      <th>19081804</th>
+      <td>245102801021023</td>
+      <td>45</td>
+      <td>4</td>
+      <td>30</td>
+      <td>11</td>
+      <td>0</td>
+      <td>2</td>
+      <td>43</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20201120</td>
+      <td>2018</td>
+      <td>14000US24510280102</td>
+    </tr>
+    <tr>
+      <th>19081805</th>
+      <td>245102801021037</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20201120</td>
+      <td>2018</td>
+      <td>14000US24510280102</td>
+    </tr>
+    <tr>
+      <th>19081806</th>
+      <td>245102804033016</td>
+      <td>9</td>
+      <td>0</td>
+      <td>4</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20201120</td>
+      <td>2018</td>
+      <td>14000US24510280403</td>
+    </tr>
+    <tr>
+      <th>19081807</th>
+      <td>245102805002000</td>
+      <td>7</td>
+      <td>0</td>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>20201120</td>
+      <td>2018</td>
+      <td>14000US24510280500</td>
+    </tr>
+  </tbody>
+</table>
+<p>2004138 rows × 55 columns</p>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -15228,51 +15580,103 @@ Read jobs for 2,004,138 block-group-years in Baltimore in 4 minutes 43 seconds!
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># print(&#39;getting from backup...&#39;)</span>
-<span class="c1"># city_raw_jobs_df_bk = city_raw_jobs_df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
-<span class="n">sum_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">city_raw_jobs_df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+<span class="c1"># print(&#39;getting from backup...&#39;)</span>
+<span class="c1"># city_raw_jobs_df = city_raw_jobs_df_bk</span>
 
-<span class="n">city_jobs_df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">sum_columns</span><span class="p">)</span>
+<span class="c1">#sum_columns = [x for x in city_raw_jobs_df.columns if x[0] == &#39;C&#39;]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;summing into census tracts...&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sum_columns</span><span class="p">:</span>
-<span class="c1">#    print(&#39;summing {0:} across census tracts...&#39;.format(x))</span>
-    <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">city_raw_jobs_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">])[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;copying 2018 jobs into 2019...&#39;</span><span class="p">)</span>
-<span class="n">city_jobs_2019_df</span> <span class="o">=</span> <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">city_jobs_2019_df</span> <span class="o">=</span> <span class="n">city_jobs_2019_df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">year</span> <span class="o">=</span> <span class="mi">2019</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">])</span>
-<span class="n">city_jobs_df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">city_jobs_df</span><span class="p">,</span> <span class="n">city_jobs_2019_df</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">city_jobs_df</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;getting columns we want...&#39;</span><span class="p">)</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;finding columns to sum over...&#39;</span><span class="p">)</span>
 <span class="n">jobs_metadata_df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">code_lookup_dir</span><span class="o">+</span><span class="s1">&#39;wac_jobs_metadata.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;varnum&#39;</span><span class="p">)</span>
+
+<span class="n">jobs_total_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C000&#39;</span><span class="p">][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_age_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CA&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_earnings_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CE&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_sector_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CNS&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_race_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CR&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_ethnicity_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CT&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_education_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CD&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_sex_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CS&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_firm_age_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CFA&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">jobs_firm_size_columns</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;CFS&#39;</span><span class="p">)][</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">jobs_columns</span> <span class="o">=</span> <span class="n">jobs_total_columns</span> <span class="o">+</span> <span class="n">jobs_age_columns</span> <span class="o">+</span> <span class="n">jobs_earnings_columns</span> <span class="o">+</span> <span class="n">jobs_sector_columns</span>
+<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="n">jobs_race_columns</span> <span class="o">+</span> <span class="n">jobs_ethnicity_columns</span> <span class="o">+</span> <span class="n">jobs_education_columns</span> <span class="o">+</span> <span class="n">jobs_sex_columns</span>
+<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="n">jobs_firm_age_columns</span> <span class="o">+</span> <span class="n">jobs_firm_size_columns</span>
+
 <span class="n">jobs_metadata_df</span> <span class="o">=</span> <span class="n">jobs_metadata_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;variable&#39;</span><span class="p">)</span>
 
-<span class="n">jobs_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C000&#39;</span><span class="p">,</span> <span class="s1">&#39;CA01&#39;</span><span class="p">,</span> <span class="s1">&#39;CA02&#39;</span><span class="p">,</span> <span class="s1">&#39;CA03&#39;</span><span class="p">,</span> <span class="s1">&#39;CE01&#39;</span><span class="p">,</span> <span class="s1">&#39;CE02&#39;</span><span class="p">,</span> <span class="s1">&#39;CE03&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS01&#39;</span><span class="p">]</span>
-<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;CNS02&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS03&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS04&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS05&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS06&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS07&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS08&#39;</span><span class="p">]</span>
-<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;CNS09&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS10&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS11&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS12&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS13&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS14&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS15&#39;</span><span class="p">]</span>
-<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;CNS16&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS17&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS18&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS19&#39;</span><span class="p">,</span> <span class="s1">&#39;CNS20&#39;</span><span class="p">,</span> <span class="s1">&#39;CR01&#39;</span><span class="p">,</span> <span class="s1">&#39;CR02&#39;</span><span class="p">]</span>
-<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;CR03&#39;</span><span class="p">,</span> <span class="s1">&#39;CR04&#39;</span><span class="p">,</span> <span class="s1">&#39;CR05&#39;</span><span class="p">,</span> <span class="s1">&#39;CR07&#39;</span><span class="p">,</span> <span class="s1">&#39;CT01&#39;</span><span class="p">,</span> <span class="s1">&#39;CT02&#39;</span><span class="p">,</span> <span class="s1">&#39;CD01&#39;</span><span class="p">,</span> <span class="s1">&#39;CD02&#39;</span><span class="p">]</span>
-<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;CD03&#39;</span><span class="p">,</span> <span class="s1">&#39;CD04&#39;</span><span class="p">,</span> <span class="s1">&#39;CS01&#39;</span><span class="p">,</span> <span class="s1">&#39;CS02&#39;</span><span class="p">,</span> <span class="s1">&#39;CFA01&#39;</span><span class="p">,</span> <span class="s1">&#39;CFA02&#39;</span><span class="p">,</span> <span class="s1">&#39;CFA03&#39;</span><span class="p">]</span>
-<span class="n">jobs_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;CFA04&#39;</span><span class="p">,</span> <span class="s1">&#39;CFA05&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS01&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS02&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS03&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS04&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS05&#39;</span><span class="p">]</span>
-
-<span class="c1">#for x in baltimore_agg_loans_df[jobs_columns].columns:</span>
-<span class="c1">#    print(&#39;variable: {0:}\t\tdescription:{1:}&#39;.format(x, jobs_metadata_df[&#39;description&#39;][jobs_metadata_df.index == x].tolist()[0]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;summing those jobs into census tracts...&#39;</span><span class="p">)</span>
+<span class="n">city_jobs_df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">jobs_columns</span><span class="p">)</span>
+<span class="n">city_jobs_df</span> <span class="o">=</span> <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
 
 
-<span class="c1">#city_jobs_df = city_jobs_df.rename(columns={&#39;C000&#39;: &#39;totaljobs&#39;, &#39;CFS01&#39;: &#39;sbjobs&#39;})</span>
-<span class="n">jobs_columns_we_want</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C000&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS01&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">jobs_columns</span><span class="p">:</span>
+<span class="c1">#    print(&#39;summing {0:} across census tracts...&#39;.format(x))</span>
+    <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,:][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">city_raw_jobs_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">])[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    
+<span class="c1"># Which variables appear in which years?    </span>
+
+<span class="c1"># city_jobs_df.xs(</span>
+<span class="c1">#     city_jobs_df.sample(1).index.get_level_values(&#39;GEOID&#39;).values[0], level=&#39;GEOID&#39;</span>
+<span class="c1"># )[jobs_ethnicity_columns]#.sum()</span>
+
+<span class="c1"># for thiscol in jobs_firm_size_columns:</span>
+<span class="c1">#     print(thiscol)</span>
+<span class="c1">#     print(&#39;----&#39;)</span>
+<span class="c1">#     for this_one_year in city_jobs_df.index.get_level_values(&#39;year&#39;).drop_duplicates().tolist():</span>
+
+<span class="c1">#         print(&#39;{0:.0f}: {1:,.0f}&#39;.format(this_one_year, city_jobs_df.xs(this_one_year, level=&#39;year&#39;)[thiscol].sum()))</span>
+<span class="c1">#     print(&#39;\n&#39;)</span>
+
+
+
+
+<span class="c1"># # print(&#39;copying 2017 jobs into 2018 and 2019...&#39;)</span>
+<span class="c1"># # city_jobs_2018_df = city_jobs_df.xs(2017, level=&#39;year&#39;).reset_index()</span>
+<span class="c1"># # city_jobs_2018_df = city_jobs_2018_df.assign(year = 2018).set_index([&#39;GEOID&#39;, &#39;year&#39;])</span>
+<span class="c1"># # city_jobs_df = pandas.concat((city_jobs_df, city_jobs_2018_df), axis=0)</span>
+
+<span class="c1"># # city_jobs_2019_df = city_jobs_df.xs(2018, level=&#39;year&#39;).reset_index()</span>
+<span class="c1"># # city_jobs_2019_df = city_jobs_2019_df.assign(year = 2019).set_index([&#39;GEOID&#39;, &#39;year&#39;])</span>
+<span class="c1"># # city_jobs_df = pandas.concat((city_jobs_df, city_jobs_2019_df), axis=0)</span>
+<span class="c1"># # city_jobs_df</span>
+
+<span class="c1"># #for x in baltimore_agg_loans_df[jobs_columns].columns:</span>
+<span class="c1"># #    print(&#39;variable: {0:}\t\tdescription:{1:}&#39;.format(x, jobs_metadata_df[&#39;description&#39;][jobs_metadata_df.index == x].tolist()[0]))</span>
+
+
+
+
+<span class="c1"># # print(&#39;backing up...&#39;)</span>
+<span class="c1"># # city_jobs_df_bk = city_jobs_df</span>
+
+<span class="c1"># e = time.time()</span>
+<span class="c1"># g = g + (e-s)</span>
+<span class="c1"># for x in city_jobs_df[jobs_columns_we_want].columns:</span>
+<span class="c1">#     print(&#39;variable: {0:}\t\tdescription:{1:}&#39;.format(x, jobs_metadata_df[&#39;description&#39;][jobs_metadata_df.index == x].tolist()[0]))</span>
+
+
+<span class="n">jobs_columns_we_want</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C000&#39;</span><span class="p">,</span> <span class="s1">&#39;CFS01&#39;</span><span class="p">]</span>   <span class="c1"># later we will focus on total and small business jobs</span>
+
+
+
+<span class="c1"># city_jobs_df.xs(</span>
+<span class="c1">#     city_jobs_df.sample(1).index.get_level_values(&#39;GEOID&#39;).values[0], level=&#39;GEOID&#39;</span>
+<span class="c1"># )[jobs_sector_columns]</span>
+
+<span class="c1">#jobs_metadata_df</span>
+
 
 <span class="c1"># print(&#39;backing up...&#39;)</span>
 <span class="c1"># city_jobs_df_bk = city_jobs_df</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">city_jobs_df</span><span class="p">[</span><span class="n">jobs_columns_we_want</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;variable: </span><span class="si">{0:}</span><span class="se">\t\t</span><span class="s1">description:</span><span class="si">{1:}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">jobs_metadata_df</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">][</span><span class="n">jobs_metadata_df</span><span class="o">.</span><span class="n">index</span> <span class="o">==</span> <span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Summed </span><span class="si">{0:,.0f}</span><span class="s1"> jobs across </span><span class="si">{1:,.0f}</span><span class="s1"> tract-years in </span><span class="si">{2:,.0f}</span><span class="s1"> minutes </span><span class="si">{3:,.0f}</span><span class="s1"> seconds!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">jobs_columns</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">city_jobs_df</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">%</span><span class="k">60</span>)))
 </pre></div>
 
      </div>
@@ -15292,11 +15696,73 @@ Read jobs for 2,004,138 block-group-years in Baltimore in 4 minutes 43 seconds!
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>summing into census tracts...
-copying 2018 jobs into 2019...
-getting columns we want...
-variable: C000		description:Total number of jobs
-variable: CFS01		description:Number of jobs for workers at firms with Firm Size: 0-19 Employees
+<pre>finding columns to sum over...
+summing those jobs into census tracts...
+Summed 51 jobs across 3,396 tract-years in 0 minutes 36 seconds!
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="c1"># print(&#39;getting from backup...&#39;)</span>
+<span class="c1"># city_jobs_df = city_jobs_df_bk</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Firm age and firm size: copying 2017 jobs into 2018...&#39;</span><span class="p">)</span>
+<span class="n">city_age_size_jobs_2018_df</span> <span class="o">=</span> <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="c1">#.reset_index()</span>
+<span class="n">city_age_size_jobs_2018_df</span> <span class="o">=</span> <span class="n">city_age_size_jobs_2018_df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">year</span> <span class="o">=</span> <span class="mi">2018</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">])</span>
+
+
+<span class="k">for</span> <span class="n">thisgeoid</span> <span class="ow">in</span> <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
+    <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">thisgeoid</span><span class="p">,</span> <span class="mi">2018</span><span class="p">][</span><span class="n">jobs_firm_age_columns</span><span class="o">+</span><span class="n">jobs_firm_size_columns</span><span class="p">]</span> <span class="o">=</span> <span class="n">city_age_size_jobs_2018_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">thisgeoid</span><span class="p">,</span> <span class="mi">2018</span><span class="p">][</span><span class="n">jobs_firm_age_columns</span><span class="o">+</span><span class="n">jobs_firm_size_columns</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All columns: copying 2018 jobs into 2019...&#39;</span><span class="p">)</span>
+<span class="n">city_jobs_2019_df</span> <span class="o">=</span> <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">city_jobs_2019_df</span> <span class="o">=</span> <span class="n">city_jobs_2019_df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">year</span> <span class="o">=</span> <span class="mi">2019</span><span class="p">)</span><span class="c1">#.set_index([&#39;GEOID&#39;, &#39;year&#39;])</span>
+
+
+<span class="n">city_jobs_df</span> <span class="o">=</span> <span class="n">city_jobs_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">city_jobs_2019_df</span> <span class="o">=</span> <span class="n">city_jobs_2019_df</span><span class="p">[</span><span class="n">city_jobs_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span>
+<span class="n">city_jobs_df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">city_jobs_df</span><span class="p">,</span> <span class="n">city_jobs_2019_df</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">]</span>
+                                                          <span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;GEOID&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">])</span>
+
+<span class="c1">#city_jobs_df</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Summed </span><span class="si">{0:,.0f}</span><span class="s1"> jobs across </span><span class="si">{1:,.0f}</span><span class="s1"> tract-years in </span><span class="si">{2:,.0f}</span><span class="s1"> minutes </span><span class="si">{3:,.0f}</span><span class="s1"> seconds!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">jobs_columns</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">city_jobs_df</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">%</span><span class="k">60</span>)))
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Firm age and firm size: copying 2017 jobs into 2018...
+All columns: copying 2018 jobs into 2019...
+
+Summed 51 jobs across 3,596 tract-years in 0 minutes 0 seconds!
 </pre>
 </div>
 </div>
@@ -15313,7 +15779,7 @@ variable: CFS01		description:Number of jobs for workers at firms with Firm Size:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -15368,7 +15834,7 @@ Added jobs data for 600 tract-years!
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15425,23 +15891,23 @@ Added jobs data for 600 tract-years!
     </tr>
     <tr>
       <th>CFS01</th>
-      <td>0</td>
+      <td>163</td>
     </tr>
     <tr>
       <th>CFS02</th>
-      <td>0</td>
+      <td>361</td>
     </tr>
     <tr>
       <th>CFS03</th>
-      <td>0</td>
+      <td>349</td>
     </tr>
     <tr>
       <th>CFS04</th>
-      <td>0</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>CFS05</th>
-      <td>0</td>
+      <td>602</td>
     </tr>
   </tbody>
 </table>
@@ -15463,7 +15929,7 @@ Added jobs data for 600 tract-years!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -15564,7 +16030,7 @@ Done in 0.2 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -15658,7 +16124,7 @@ discarding block groups, keeping census tracts...
 converting to numeric...
 renaming error columns...
 joining to the rest of the data...
-Baltimore: Kept 600 tract-years in 0 minutes 30 seconds!
+Baltimore: Kept 600 tract-years in 0 minutes 29 seconds!
 </pre>
 </div>
 </div>
@@ -15675,7 +16141,7 @@ Baltimore: Kept 600 tract-years in 0 minutes 30 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">acs5_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span>
@@ -15697,7 +16163,7 @@ Baltimore: Kept 600 tract-years in 0 minutes 30 seconds!
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15894,7 +16360,7 @@ Baltimore: Kept 600 tract-years in 0 minutes 30 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16019,7 +16485,7 @@ Done in 0 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Guide on how to calculate errors in percentages:</span>
@@ -16078,7 +16544,7 @@ ok
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16214,7 +16680,7 @@ Done in 0 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16277,7 +16743,7 @@ Done in 0 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16295,7 +16761,7 @@ Done in 0 seconds!
 <span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_vacant</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;vacant_housing_units&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;total_housing_units&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">))</span>
 
 <span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_rent</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;tenure_rent&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;tenure_total&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">))</span>
-<span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_household_familiy</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;household_type_family&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;household_type_total&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">))</span>
+<span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_household_family</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;household_type_family&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">data_gdf</span><span class="p">[</span><span class="s1">&#39;household_type_total&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">))</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span>
@@ -16330,7 +16796,7 @@ Done in 0 seconds!
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -16353,11 +16819,11 @@ Done in 0 seconds!
   <thead>
     <tr>
       <th>GEOID</th>
-      <th>14000US24510250303</th>
+      <th>14000US24510280404</th>
     </tr>
     <tr>
       <th>year</th>
-      <th>2019</th>
+      <th>2017</th>
     </tr>
   </thead>
   <tbody>
@@ -16371,15 +16837,15 @@ Done in 0 seconds!
     </tr>
     <tr>
       <th>census_tract</th>
-      <td>2503.03</td>
+      <td>2804.04</td>
     </tr>
     <tr>
       <th>NAME</th>
-      <td>2503.03</td>
+      <td>2804.04</td>
     </tr>
     <tr>
       <th>NAMELSAD</th>
-      <td>Census Tract 2503.03</td>
+      <td>Census Tract 2804.04</td>
     </tr>
     <tr>
       <th>...</th>
@@ -16387,23 +16853,23 @@ Done in 0 seconds!
     </tr>
     <tr>
       <th>pct_unemployed</th>
-      <td>0.110591</td>
+      <td>0.0952035</td>
     </tr>
     <tr>
       <th>pct_poverty</th>
-      <td>0.237516</td>
+      <td>0.207976</td>
     </tr>
     <tr>
       <th>pct_vacant</th>
-      <td>0.231546</td>
+      <td>0.133454</td>
     </tr>
     <tr>
       <th>pct_rent</th>
-      <td>0.623974</td>
+      <td>0.595213</td>
     </tr>
     <tr>
-      <th>pct_household_familiy</th>
-      <td>0.596059</td>
+      <th>pct_household_family</th>
+      <td>0.537981</td>
     </tr>
   </tbody>
 </table>
@@ -16425,7 +16891,7 @@ Done in 0 seconds!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Guide on how to do this:</span>
@@ -16512,7 +16978,7 @@ ok
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">verboselevel</span> <span class="o">=</span> <span class="mi">0</span>
@@ -16531,7 +16997,7 @@ ok
 
 
 <span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_rent_serr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_household_familiy_serr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">data_gdf</span> <span class="o">=</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">pct_household_family_serr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 
 
 <span class="c1">#data_gdf.loc[:, </span>
@@ -16556,7 +17022,7 @@ ok
     <span class="n">data_gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span> <span class="s1">&#39;pct_vacant_serr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_errors_in_pct</span><span class="p">(</span><span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;vacant_housing_units&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;total_housing_units&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;vacant_housing_units_err&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;total_housing_units_err&#39;</span><span class="p">],</span> <span class="n">verboselevel</span><span class="p">)</span>
 
     <span class="n">data_gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span> <span class="s1">&#39;pct_rent_serr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_errors_in_pct</span><span class="p">(</span><span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;tenure_rent&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;tenure_total&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;tenure_rent_err&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;tenure_total_err&#39;</span><span class="p">],</span> <span class="n">verboselevel</span><span class="p">)</span>
-    <span class="n">data_gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span> <span class="s1">&#39;pct_household_familiy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_errors_in_pct</span><span class="p">(</span><span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_family&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_total&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_family_err&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_total_err&#39;</span><span class="p">],</span> <span class="n">verboselevel</span><span class="p">)</span>
+    <span class="n">data_gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span> <span class="s1">&#39;pct_household_family_serr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">find_errors_in_pct</span><span class="p">(</span><span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_family&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_total&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_family_err&#39;</span><span class="p">],</span> <span class="n">thisrow</span><span class="p">[</span><span class="s1">&#39;household_type_total_err&#39;</span><span class="p">],</span> <span class="n">verboselevel</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="n">verboselevel</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">ix</span><span class="p">,</span> <span class="n">thisrow</span> <span class="ow">in</span> <span class="n">data_gdf</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
@@ -16620,7 +17086,7 @@ ok
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16671,7 +17137,7 @@ ok
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -16733,7 +17199,7 @@ ok
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16809,7 +17275,7 @@ ok
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16859,7 +17325,7 @@ ok
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -16913,13 +17379,13 @@ ok
 <span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;educated_serr&#39;</span><span class="p">,</span><span class="s1">&#39;unemployed_16plus_err&#39;</span><span class="p">,</span><span class="s1">&#39;poverty_past_12_months_err&#39;</span><span class="p">,</span><span class="s1">&#39;mfi_err&#39;</span><span class="p">]</span> <span class="c1"># high school graduates (ages 25+), unemployed, in poverty, MFI, travel time to work</span>
 <span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;owner_occ_housing_units_err&#39;</span><span class="p">,</span><span class="s1">&#39;median_home_value_err&#39;</span><span class="p">,</span> <span class="s1">&#39;median_year_built_err&#39;</span><span class="p">]</span> <span class="c1"># home</span>
 <span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;pop_25plus_err&#39;</span><span class="p">,</span><span class="s1">&#39;labor_force_16plus_err&#39;</span><span class="p">,</span><span class="s1">&#39;poverty_status_known_err&#39;</span><span class="p">]</span>
+<span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;household_type_family_err&#39;</span><span class="p">,</span> <span class="s1">&#39;household_type_nonfamily_err&#39;</span><span class="p">,</span> <span class="s1">&#39;household_type_total_err&#39;</span><span class="p">,</span> <span class="s1">&#39;tenure_rent_err&#39;</span><span class="p">,</span> <span class="s1">&#39;tenure_total_err&#39;</span><span class="p">]</span>
 
 <span class="c1"># census percentages and their errors</span>
 <span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;pct_white&#39;</span><span class="p">,</span><span class="s1">&#39;pct_black&#39;</span><span class="p">,</span><span class="s1">&#39;pct_white_householders&#39;</span><span class="p">,</span><span class="s1">&#39;pct_black_householders&#39;</span><span class="p">,</span><span class="s1">&#39;pct_female_householders&#39;</span><span class="p">]</span>
-<span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;peducated&#39;</span><span class="p">,</span><span class="s1">&#39;pct_unemployed&#39;</span><span class="p">,</span><span class="s1">&#39;pct_poverty&#39;</span><span class="p">,</span><span class="s1">&#39;pct_vacant&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_household_familiy&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_rent&#39;</span><span class="p">]</span>
+<span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;peducated&#39;</span><span class="p">,</span><span class="s1">&#39;pct_unemployed&#39;</span><span class="p">,</span><span class="s1">&#39;pct_poverty&#39;</span><span class="p">,</span><span class="s1">&#39;pct_vacant&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_household_family&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_rent&#39;</span><span class="p">]</span>
 <span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;pct_white_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_black_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_white_householders_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_black_householders_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_female_householders_serr&#39;</span><span class="p">]</span>
-<span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;peducated_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_unemployed_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_poverty_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_vacant_serr&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_household_familiy_serr&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_rent_serr&#39;</span><span class="p">]</span>
-<span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;household_type_family_err&#39;</span><span class="p">,</span> <span class="s1">&#39;household_type_nonfamily_err&#39;</span><span class="p">,</span> <span class="s1">&#39;household_type_total_err&#39;</span><span class="p">,</span> <span class="s1">&#39;tenure_rent_err&#39;</span><span class="p">,</span> <span class="s1">&#39;tenure_total_err&#39;</span><span class="p">]</span>
+<span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;peducated_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_unemployed_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_poverty_serr&#39;</span><span class="p">,</span><span class="s1">&#39;pct_vacant_serr&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_household_family_serr&#39;</span><span class="p">,</span> <span class="s1">&#39;pct_rent_serr&#39;</span><span class="p">]</span>
 
 <span class="c1"># # inflation-adjusted money values</span>
 <span class="n">new_columns</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;amtLoans1_adj&#39;</span><span class="p">,</span><span class="s1">&#39;amtLoans100k_adj&#39;</span><span class="p">,</span><span class="s1">&#39;amtLoans250k_adj&#39;</span><span class="p">,</span><span class="s1">&#39;amtLoansToSmallest_adj&#39;</span><span class="p">]</span>
@@ -16991,7 +17457,7 @@ Done!
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;outputting without shapefile data...&#39;</span><span class="p">)</span>
@@ -17015,6 +17481,7 @@ Done!
 
 <span class="n">e</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done in </span><span class="si">{0:,.0f}</span><span class="s1"> minutes </span><span class="si">{1:,.0f}</span><span class="s1"> seconds!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">e</span><span class="o">-</span><span class="n">s</span><span class="p">)</span><span class="o">%</span><span class="k">60</span>)))
 </pre></div>
 
      </div>
@@ -17053,7 +17520,7 @@ outputting shapefile data separately...
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -17093,7 +17560,7 @@ outputting shapefile data separately...
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>DONE! Total time: 11 minutes 6 seconds!
+<pre>DONE! Total time: 6 minutes 48 seconds!
 </pre>
 </div>
 </div>
@@ -17101,7 +17568,7 @@ outputting shapefile data separately...
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
