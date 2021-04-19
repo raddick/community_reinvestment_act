@@ -1,0 +1,109 @@
+rownumber,variable,description
+0,FILEID,FILEID
+1,FILETYPE,FILETYPE
+2,STUSAB,STUSAB
+3,CHARITER,CHARITER
+4,SEQUENCE,SEQUENCE
+5,LOGRECNO,LOGRECNO
+6,B01001_001,SEX BY AGE% Total population%Total
+16,B01001_011,SEX BY AGE%Total population%Total%Male%25 to 29 years
+17,B01001_012,SEX BY AGE%Total population%Total%Male%30 to 34 years
+18,B01001_013,SEX BY AGE%Total population%Total%Male%35 to 39 years
+19,B01001_014,SEX BY AGE%Total population%Total%Male%40 to 44 years
+20,B01001_015,SEX BY AGE%Total population%Total%Male%45 to 49 years
+21,B01001_016,SEX BY AGE%Total population%Total%Male%50 to 54 years
+22,B01001_017,SEX BY AGE%Total population%Total%Male%55 to 59 years
+23,B01001_018,SEX BY AGE%Total population%Total%Male%60 and 61 years
+24,B01001_019,SEX BY AGE%Total population%Total%Male%62 to 64 years
+25,B01001_020,SEX BY AGE%Total population%Total%Male%65 and 66 years
+26,B01001_021,SEX BY AGE%Total population%Total%Male%67 to 69 years
+27,B01001_022,SEX BY AGE%Total population%Total%Male%70 to 74 years
+28,B01001_023,SEX BY AGE%Total population%Total%Male%75 to 79 years
+29,B01001_024,SEX BY AGE%Total population%Total%Male%80 to 84 years
+30,B01001_025,SEX BY AGE%Total population%Total%Male%85 years and over
+31,B01001_026,SEX BY AGE%Total population%Total%Female
+32,B01001_027,SEX BY AGE%Total population%Total%Female%Under 5 years
+33,B01001_028,SEX BY AGE%Total population%Total%Female%5 to 9 years
+34,B01001_029,SEX BY AGE%Total population%Total%Female%10 to 14 years
+35,B01001_030,SEX BY AGE%Total population%Total%Female%15 to 17 years
+36,B01001_031,SEX BY AGE%Total population%Total%Female%18 and 19 years
+37,B01001_032,SEX BY AGE%Total population%Total%Female%20 years
+38,B01001_033,SEX BY AGE%Total population%Total%Female%21 years
+39,B01001_034,SEX BY AGE%Total population%Total%Female%22 to 24 years
+40,B01001_035,SEX BY AGE%Total population%Total%Female%25 to 29 years
+41,B01001_036,SEX BY AGE%Total population%Total%Female%30 to 34 years
+42,B01001_037,SEX BY AGE%Total population%Total%Female%35 to 39 years
+43,B01001_038,SEX BY AGE%Total population%Total%Female%40 to 44 years
+44,B01001_039,SEX BY AGE%Total population%Total%Female%45 to 49 years
+45,B01001_040,SEX BY AGE%Total population%Total%Female%50 to 54 years
+46,B01001_041,SEX BY AGE%Total population%Total%Female%55 to 59 years
+47,B01001_042,SEX BY AGE%Total population%Total%Female%60 and 61 years
+48,B01001_043,SEX BY AGE%Total population%Total%Female%62 to 64 years
+49,B01001_044,SEX BY AGE%Total population%Total%Female%65 and 66 years
+50,B01001_045,SEX BY AGE%Total population%Total%Female%67 to 69 years
+51,B01001_046,SEX BY AGE%Total population%Total%Female%70 to 74 years
+52,B01001_047,SEX BY AGE%Total population%Total%Female%75 to 79 years
+53,B01001_048,SEX BY AGE%Total population%Total%Female%80 to 84 years
+54,B01001_049,SEX BY AGE%Total population%Total%Female%85 years and over
+365,B02001_001,RACE% Total population%Total
+366,B02001_002,RACE%Total population%Total%White alone
+367,B02001_003,RACE%Total population%Total%Black or African American alone
+4246,B08013_001,AGGREGATE TRAVEL TIME TO WORK (IN MINUTES) OF WORKERS BY SEX% Workers 16 years and over who did not work from home%Aggregate travel time to work (in minutes)
+6610,B11001_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE)% Households%Total
+6611,B11001_002,HOUSEHOLD TYPE (INCLUDING LIVING ALONE)%Households%Total%Family households
+6615,B11001_006,HOUSEHOLD TYPE (INCLUDING LIVING ALONE)%Households%Total%Family households%Other family%Female householder no spouse present
+6616,B11001_007,HOUSEHOLD TYPE (INCLUDING LIVING ALONE)%Households%Total%Nonfamily households
+6619,B11001A_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) (WHITE ALONE)% Households with a householder who is White alone%Total
+6628,B11001B_001,HOUSEHOLD TYPE (INCLUDING LIVING ALONE) (BLACK OR AFRICAN AMERICAN ALONE)% Households with a householder who is Black or African American alone%Total
+8179,B15003_001,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER% Population 25 years and over%Total
+8180,B15003_002,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%No schooling completed
+8181,B15003_003,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Nursery school
+8182,B15003_004,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Kindergarten
+8183,B15003_005,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%1st grade
+8184,B15003_006,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%2nd grade
+8185,B15003_007,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%3rd grade
+8186,B15003_008,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%4th grade
+8187,B15003_009,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%5th grade
+8188,B15003_010,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%6th grade
+8189,B15003_011,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%7th grade
+8190,B15003_012,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%8th grade
+8191,B15003_013,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%9th grade
+8192,B15003_014,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%10th grade
+8193,B15003_015,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%11th grade
+8194,B15003_016,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%12th grade no diploma
+8195,B15003_017,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Regular high school diploma
+8196,B15003_018,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%GED or alternative credential
+8197,B15003_019,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Some college less than 1 year
+8198,B15003_020,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Some college 1 or more years no degree
+8199,B15003_021,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Associate's degree
+8200,B15003_022,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Bachelor's degree
+8201,B15003_023,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Master's degree
+8202,B15003_024,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Professional school degree
+8203,B15003_025,EDUCATIONAL ATTAINMENT FOR THE POPULATION 25 YEARS AND OVER%Population 25 years and over%Total%Doctorate degree
+8981,B17001_001,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE% Population for whom poverty status is determined%Total
+8982,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE%Population for whom poverty status is determined%Total%Income in the past 12 months below poverty level
+9040,B17001A_001,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE (WHITE ALONE)% White alone population for whom poverty status is determined%Total
+9041,B17001A_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE (WHITE ALONE)%White alone population for whom poverty status is determined%Total%Income in the past 12 months below poverty level
+9099,B17001B_001,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE (BLACK OR AFRICAN AMERICAN ALONE)% Black or African American alone population for whom poverty status is determined%Total
+9100,B17001B_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE (BLACK OR AFRICAN AMERICAN ALONE)%Black or African American alone population for whom poverty status is determined%Total%Income in the past 12 months below poverty level
+11567,B19013_001,MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)% Households%Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+11568,B19013A_001,MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (WHITE ALONE HOUSEHOLDER)% Households with a householder who is White alone%Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+11569,B19013B_001,MEDIAN HOUSEHOLD INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS) (BLACK OR AFRICAN AMERICAN ALONE HOUSEHOLDER)% Households with a householder who is Black or African American alone%Median household income in the past 12 months (in 2019 inflation-adjusted dollars)
+12522,B19113_001,MEDIAN FAMILY INCOME IN THE PAST 12 MONTHS (IN 2019 INFLATION-ADJUSTED DOLLARS)% Families%Median family income in the past 12 months (in 2019 inflation-adjusted dollars)
+15135,B23025_002,EMPLOYMENT STATUS FOR THE POPULATION 16 YEARS AND OVER%Population 16 years and over%Total%In labor force
+15138,B23025_005,EMPLOYMENT STATUS FOR THE POPULATION 16 YEARS AND OVER%Population 16 years and over%Total%In labor force%Civilian labor force%Unemployed
+21374,B25002_001,OCCUPANCY STATUS% Housing units%Total
+21375,B25002_002,OCCUPANCY STATUS%Housing units%Total%Occupied
+21376,B25002_003,OCCUPANCY STATUS%Housing units%Total%Vacant
+21377,B25003_001,TENURE% Occupied housing units%Total
+21378,B25003_002,TENURE%Occupied housing units%Total%Owner occupied
+21379,B25003_003,TENURE%Occupied housing units%Total%Renter occupied
+21380,B25003A_001,TENURE (WHITE ALONE HOUSEHOLDER)% Occupied housing units with a householder who is White alone%Total
+21381,B25003A_002,TENURE (WHITE ALONE HOUSEHOLDER)%Occupied housing units with a householder who is White alone%Total%Owner occupied
+21382,B25003A_003,TENURE (WHITE ALONE HOUSEHOLDER)%Occupied housing units with a householder who is White alone%Total%Renter occupied
+21383,B25003B_001,TENURE (BLACK OR AFRICAN AMERICAN ALONE HOUSEHOLDER)% Occupied housing units with a householder who is Black or African American alone%Total
+21384,B25003B_002,TENURE (BLACK OR AFRICAN AMERICAN ALONE HOUSEHOLDER)%Occupied housing units with a householder who is Black or African American alone%Total%Owner occupied
+21385,B25003B_003,TENURE (BLACK OR AFRICAN AMERICAN ALONE HOUSEHOLDER)%Occupied housing units with a householder who is Black or African American alone%Total%Renter occupied
+21859,B25034_001,YEAR STRUCTURE BUILT% Housing units%Total
+21870,B25035_001,MEDIAN YEAR STRUCTURE BUILT% Housing units%Median year structure built
+22338,B25077_001,MEDIAN VALUE (DOLLARS)% Owner-occupied housing units%Median value (dollars)
