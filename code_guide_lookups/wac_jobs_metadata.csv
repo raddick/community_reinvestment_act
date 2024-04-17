@@ -1,0 +1,59 @@
+varnum,variable,type,description
+1,w_geocode,Char(15),Workplace Census Block Code
+2,C000,Num,Total number of jobs
+3,CA01,Num,Number of jobs for workers age 29 or younger
+4,CA02,Num,Number of jobs for workers age 30 to 54
+5,CA03,Num,Number of jobs for workers age 55 or older
+6,CE01,Num,"Number of jobs with earnings $1250/month or less"""
+7,CE02,Num,Number of jobs with earnings $1251/month to $3333/month
+8,CE03,Num,Number of jobs with earnings greater than $3333/month
+9,CNS01,Num,"Number of jobs in NAICS sector 11 (Agriculture, Forestry, Fishing and Hunting)"
+10,CNS02,Num,"Number of jobs in NAICS sector 21 (Mining, Quarrying, and Oil and Gas Extraction)"
+11,CNS03,Num,Number of jobs in NAICS sector 22 (Utilities)
+12,CNS04,Num,Number of jobs in NAICS sector 23 (Construction)
+13,CNS05,Num,Number of jobs in NAICS sector 31-33 (Manufacturing)
+14,CNS06,Num,Number of jobs in NAICS sector 42 (Wholesale Trade)
+15,CNS07,Num,Number of jobs in NAICS sector 44-45 (Retail Trade)
+16,CNS08,Num,Number of jobs in NAICS sector 48-49 (Transportation and Warehousing)
+17,CNS09,Num,Number of jobs in NAICS sector 51 (Information)
+18,CNS10,Num,Number of jobs in NAICS sector 52 (Finance and Insurance)
+19,CNS11,Num,Number of jobs in NAICS sector 53 (Real Estate and Rental and Leasing)
+20,CNS12,Num,"Number of jobs in NAICS sector 54 (Professional, Scientific, and Technical Services)"
+21,CNS13,Num,Number of jobs in NAICS sector 55 (Management of Companies and Enterprises)
+22,CNS14,Num,"Number of jobs in NAICS sector 56 (Administrative and Support and Waste
+Management and Remediation Services)"
+23,CNS15,Num,Number of jobs in NAICS sector 61 (Educational Services)
+24,CNS16,Num,Number of jobs in NAICS sector 62 (Health Care and Social Assistance)
+25,CNS17,Num,"Number of jobs in NAICS sector 71 (Arts, Entertainment, and Recreation)"
+26,CNS18,Num,Number of jobs in NAICS sector 72 (Accommodation and Food Services)
+27,CNS19,Num,Number of jobs in NAICS sector 81 (Other Services [except Public Administration])
+28,CNS20,Num,Number of jobs in NAICS sector 92 (Public Administration)
+29,CR01,Num,"Number of jobs for workers with Race: White, Alone"
+30,CR02,Num,Number of jobs for workers with Race: Black or African American Alone
+31,CR03,Num,Number of jobs for workers with Race: American Indian or Alaska Native Alone
+32,CR04,Num,Number of jobs for workers with Race: Asian Alone
+33,CR05,Num,"Number of jobs for workers with Race: Native Hawaiian or Other Pacific Islander
+Alone"
+34,CR07,Num,Number of jobs for workers with Race: Two or More Race Groups
+35,CT01,Num,Number of jobs for workers with Ethnicity: Not Hispanic or Latino
+36,CT02,Num,Number of jobs for workers with Ethnicity: Hispanic or Latino
+37,CD01,Num,Number of jobs for workers with Educational Attainment: Less than high school
+38,CD02,Num,"Number of jobs for workers with Educational Attainment: High school or equivalent,
+no college"
+39,CD03,Num,"Number of jobs for workers with Educational Attainment: Some college or Associate
+degree"
+40,CD04,Num,"Number of jobs for workers with Educational Attainment: Bachelor's degree or
+advanced degree"
+41,CS01,Num,Number of jobs for workers with Sex: Male
+42,CS02,Num,Number of jobs for workers with Sex: Female
+43,CFA01,Num,Number of jobs for workers at firms with Firm Age: 0-1 Years
+44,CFA02,Num,Number of jobs for workers at firms with Firm Age: 2-3 Years
+45,CFA03,Num,Number of jobs for workers at firms with Firm Age: 4-5 Years
+46,CFA04,Num,Number of jobs for workers at firms with Firm Age: 6-10 Years
+47,CFA05,Num,Number of jobs for workers at firms with Firm Age: 11+ Years
+48,CFS01,Num,Number of jobs for workers at firms with Firm Size: 0-19 Employees
+49,CFS02,Num,Number of jobs for workers at firms with Firm Size: 20-49 Employees
+50,CFS03,Num,Number of jobs for workers at firms with Firm Size: 50-249 Employees
+51,CFS04,Num,Number of jobs for workers at firms with Firm Size: 250-499 Employees
+52,CFS05,Num,Number of jobs for workers at firms with Firm Size: 500+ Employees
+53,createdate,Char(8),"Date on which data was created, formatted as YYYYMMDD"

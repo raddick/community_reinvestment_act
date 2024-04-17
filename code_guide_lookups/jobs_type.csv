@@ -1,0 +1,7 @@
+position, variable, description
+1,JT00,All Jobs
+2,JT01,Primary Jobs
+3,JT02,All Private Jobs
+4,JT03,Private Primary Jobs
+5,JT04,All Federal Jobs,
+6,JT05,Federal Primary Jobs

@@ -1,0 +1,14 @@
+position, variable, dtype, description
+1,w_geocode,Char15,Workplace Census Block Code
+2,h_geocode,Char15,Residence Census Block Code
+3,S000,Num,Total number of jobs
+4,SA01,Num,Number of jobs of workers age 29 or younger
+5,SA02,Num,Number of jobs for workers age 30 to 54
+6,SA03,Num,Number of jobs for workers age 55 or older
+7,SE01,Num,Number of jobs with earnings $1250/month or less
+8,SE02,Num,Number of jobs with earnings $1251/month to $3333/month
+9,SE03,Num,Number of jobs with earnings greater than $3333/month
+10,SI01,Num,Number of jobs in Goods Producing industry sectors
+11,SI02,Num,"Number of jobs in Trade, Transportation, and Utilities industry sectors"
+12,SI03,Num,Number of jobs in All Other Services industry sectors
+13,createdate,Char,"Date on which data was created, formatted as YYYYMMDD"
